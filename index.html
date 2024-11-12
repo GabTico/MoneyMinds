@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billetera digital para menores de edad</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Te damos la<br>bienvenida a:</br></h1>
+    <img c src="/assets/MoneyMids.png" alt="">
+
+    <h2>MoneyMids</h2>
+
+    <h3>Ingrese a su MoneyMids</h3>
+
+    <div class="login-container"></div>
+    
+    <form action="procesar_login.php" method="POST">
+        <label for="username">Tipo de documento</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Ingresar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jsonfile": "^6.1.0"
+  }
+}

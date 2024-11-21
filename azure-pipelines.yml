@@ -1,22 +1,38 @@
 trigger:
   branches:
     include:
-      - main # Rama que activará la pipeline.
+      - main # Ejecutar solo en la rama "main".
 
 pool:
-  vmImage: 'ubuntu-latest' # Máquina virtual de ejecución.
+  vmImage: 'ubuntu-latest' # Usa una máquina virtual con Linux.
+
+variables:
+  node_version: '20.17.0' # Versión específica de Node.js.
+  build_directory: 'dist' # Directorio de salida de la construcción.
 
 steps:
+  # 1. Configurar la versión de Node.js
   - task: NodeTool@0
     inputs:
-      versionSpec: '16.x' # Especifica la versión de Node.js (ajusta según tu proyecto).
-    displayName: 'Usar Node.js 16'
+      versionSpec: $(node_version)
+    displayName: 'Configurar Node.js $(node_version)'
 
-  - script: npm install
-    displayName: 'Instalar dependencias'
+  # 2. Instalar dependencias
+  - script: npm ci
+    displayName: 'Instalar dependencias con npm ci'
 
+  # 3. Construir la aplicación
   - script: npm run build
     displayName: 'Construir la aplicación'
 
-  - script: npm test
-    displayName: 'Ejecutar pruebas'
+  # 4. Ejecutar pruebas
+  - script: npm test -- --ci
+    displayName: 'Ejecutar pruebas unitarias'
+
+  # 5. Publicar artefactos (opcional)
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(build_directory)'
+      artifactName: 'drop'
+      publishLocation: 'Container'
+    displayName: 'Publicar artefactos de construcción'

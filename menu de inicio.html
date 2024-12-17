@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu de inicio.css">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/assets/avatar.png" alt="Bootstrap" width="60" height="60">
+            <span class="ms-2 text-white">Hola, buenos días Daniel!</span> <!-- Solo este texto será blanco -->
+          </a>
+        </div>
+       <!-- Botón hamburguesa -->
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido colapsable del navbar -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Servicios</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Opciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Configuración</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="saldo-container">
+    <div class="saldo-circle">
+        <div class="saldo-text">tu saldo actual</div> <!-- Texto que dice "Mi saldo" -->
+        <span>10.00$</span> <!-- Este es el saldo -->
+        <!-- Botón "Ver más" con estilo de enlace -->
+        <a href="#" class="ver-mas-btn">Ver más</a>
+
+      </div>  
+    </div>
+
+     <!-- Botones fuera del círculo -->
+  <div class="buttons-container">
+    <!-- Botón Transferir -->
+    <div class="button">
+      <img src="/assets/Trnasferir-removebg-preview.png" alt="Transferir">
+      <span>Transferir</span>
+    </div>
+
+    <!-- Botón Recargar -->
+    <div class="button">
+      <img src="/assets/Recargar-removebg-preview.png" alt="Recargar">
+      <span>Recargar</span>
+    </div>
+
+    <!-- Botón Factura -->
+    <div class="button">
+      <img src="/assets/Factura-removebg-preview.png" alt="Factura">
+      <span>Factura</span>
+    </div>
+
+    <!-- Botón Más -->
+    <div class="button">
+      <img src="/assets/Mas-removebg-preview.png" alt="Más">
+      <span>Más</span>
+    </div>
+</body>
+</html>

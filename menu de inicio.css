@@ -1,0 +1,103 @@
+body{
+    background: linear-gradient(to bottom, #F52485, #FFA435);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Organiza todo en columna */
+    justify-content: center;
+    align-items: center;
+}
+
+.saldo-container {
+    text-align: center; /* Centra el texto */
+    margin-top: 80px; /* Ajusta el margen superior si es necesario */
+  }
+
+.saldo-text {
+    color: rgb(0, 0, 0); /* Color blanco para el texto */
+    font-size: 1rem; /* Tamaño de fuente para el texto */
+    margin-bottom: 5px; /* Espacio entre el texto y el círculo */
+  }  
+
+.saldo-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    border: 3px solid #ffffff; /* Borde blanco */
+    text-align: center;
+    margin-top: 18px; /* Ajusta este valor según lo que necesites */
+  }
+
+  .ver-mas-btn {
+    font-size: 1rem;
+    color: red; /* Color rojo */
+    text-decoration: none; /* Elimina subrayado predeterminado */
+    border-bottom: 2px solid red; /* Línea roja debajo del texto */
+    padding-top: 10px; /* Separar del número de saldo */
+  }
+
+  .ver-mas-btn:hover {
+    color: darkred; /* Cambiar a un tono más oscuro de rojo al pasar el ratón */
+  }
+
+  /* Estilos para los botones fuera del círculo */
+  .buttons-container {
+    display: flex;
+    justify-content: center; /* Espacio entre los botones */
+    gap: 20px; /* Espaciado entre los botones */
+    width: 100%;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Ajusta el tamaño del botón */
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-5px); /* Efecto de desplazamiento al pasar el ratón */
+  }
+
+  .button img {
+    width: 40px; /* Tamaño de las imágenes dentro de los botones */
+    height: 40px;
+    margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+  }
+
+  .button span {
+    font-size: 0.9rem; /* Tamaño del texto en los botones */
+    color: #333;
+  }
+
+  .navbar-toggler {
+    border: none; /* Eliminar borde del botón */
+    color: white; /* Cambiar color del icono */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23FFFFFF" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%280, 0, 0, 0.5%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    /* Icono blanco */
+}
